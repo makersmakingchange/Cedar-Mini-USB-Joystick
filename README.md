@@ -58,12 +58,10 @@ Reference the [Assembly Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide
 | Document             | Version | Link |
 |----------------------|---------|------|
 | Design Rationale     | 0.9     | [Cedar_Mini_Joystick_Design_Rationale](/Documentation/Cedar_Mini_Joystick_Design_Rationale_v0.9.pdf)     |
-<!--- | Maker Checklist      | 0.9     | [Cedar_Mini_Joystick_Maker_Checklist](/Documentation/Cedar_Mini_Joystick_Maker_Checklist_v0.9.pdf)     | --->
 | Bill of Materials    | 0.9     | [Cedar_Mini_Joystick_Bill_of_Materials](/Documentation/Cedar_Mini_Joystick_BOM_v0.9.xlsx)     |
 | 3D Printing Guide    | 0.9     | [Cedar_Mini_Joystick_3D_Printing_Guide](/Documentation/Cedar_Mini_Joystick_3D_Printing_Guide_v0.9.pdf)     |
 | Assembly Guide       | 0.9     | [Cedar_Mini_Joystick_Assembly_Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide_v0.9.pdf)     |
 | User Guide           | 0.9     | [Cedar_Mini_Joystick_User_Guide](/Documentation/Cedar_Mini_Joystick_User_Guide_v0.9.pdf)    |
-| Changelog            | 0.9     | [Cedar_Mini_Joystick_Changelog](/Documentation/Cedar_Mini_Joystick_Changelog_v0.9.pdf)     |
 
 ### Design Files
 [CAD Files](/Design_Files)
