@@ -1,0 +1,12 @@
+------CEDAR MINI JOYSTICK------
+           Changelog
+===============================
+
+Version 0.9 | 2023-Jun-30
+ - Initial commit
+ - Cedar Mini joystick with 3 integrated switch jacks and a mode slide switch
+ - Firmware has Mouse mode and Joystick mode
+
+
+
+

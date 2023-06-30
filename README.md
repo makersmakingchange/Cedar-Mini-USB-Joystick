@@ -3,24 +3,34 @@ The Cedar Mini Joystick – U is a small USB joystick that can act as either an 
 
 <img src="Photos/Cedar-Mini-Joystick.jpg" width="500" alt="Picture of Cedar-Mini-Joystick.">
 
-## More info at
-- [Makers Making Change Project Page](<Add link>)
-- [Makers Making Change Forum Thread](<Add link>)
+## OpenAT Joysticks
+This design is part of the [OpenAT Joystick project](https://github.com/makersmakingchange/OpenAT-Joysticks), a collection of open source designs for digital access and adapted gaming.  
 
 
 ## How to Obtain a Cedar Mini Joystick
+There are several options for obtaining the device.
 ### 1. Do it Yourself (DIY) or Do it Together (DIT)
 
 This is an open-source assistive technology, so anyone is free to build it. All of the files and instructions required to build the Cedar Mini Joystick are contained within this repository. Refer to the Maker Checklist below.
 
 ### 2. Request a build of this device
 
+
+A limited number of these devices may be available at no-cost to people with disabilities that reside within Canada. If you think this applies to you, please send an email to info@makersmakingchange.com.
+
+Once the device is finalized and published in the Makers Making Change library, it will also be possible to submit a build request to have a volunteer maker build the device. As the requestor, you are responsible for reimbursing the maker for the cost of materials and any shipping.
+<!---
 If you would like to obtain a Cedar Mini Joystick , you may submit a build request through the [MMC Library Page](https://makersmakingchange.com/project/Cedar-Mini-Joystick/). The requestor is responsible for the cost of materials and any shipping.
+--->
 
 ### 3. How to build this device for someone else
+Once the device is finalized and published in the Makers Making Change library, there is a plan to hold a number of build events in Canada. If you'd like to participate, send an email to info@makersmakingchange.com.
 
+Once added to the library, if you have the skills and equipment to build this device, and would like to donate your time to create the device for someone who needs it, visit the [MMC Makers Wanted](https://makersmakingchange.com/maker-wanted/) section to fulfill build requests.
+
+<!---
 If you have the skills and equipment to build this device, and would like to donate your time to create the switch for someone who needs it, visit the [MMC Maker Wanted](https://makersmakingchange.com/maker-wanted/) section.
-
+--->
 
 ## Getting Started
 
@@ -35,11 +45,11 @@ The [Bill of Materials](/Documentation/Cedar_Mini_Joystick_BOM.xlsx) lists all o
 
 ### 3. Print the 3D Printable components
 
-Print the components ...
+Print the components needed for the Cedar Mini Joystick. Make sure to ask the user if they would like any of the optional prints such as toppers or mount adapters.
 
 All of the files and individual print files can be in the [/Build_Files/3D_Printing_Files](/Build_Files/3D_Printing/) folder.
 
-### 4. Assemble the Cedar Mini Joystick...
+### 4. Assemble the Cedar Mini Joystick
 
 Reference the [Assembly Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide_v0.9.pdf) for the tools and steps required to build each portion.
 
@@ -47,13 +57,13 @@ Reference the [Assembly Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide
 ### Documentation
 | Document             | Version | Link |
 |----------------------|---------|------|
-| Design Rationale     | 0.9     | [DeviceName_Design_Rationale](/Documentation/Cedar_Mini_Joystick_Design_Rationale_v0.9.pdf)     |
-| Maker Checklist      | 0.9     | [DeviceName_Maker_Checklist](/Documentation/Cedar_Mini_Joystick_Maker_Checklist_v0.9.pdf)     |
-| Bill of Materials    | 0.9     | [DeviceName_Bill_of_Materials](/Documentation/Cedar_Mini_Joystick_BOM_v0.9.xlsx)     |
-| 3D Printing Guide    | 0.9     | [DeviceName_3D_Printing_Guide](/Documentation/Cedar_Mini_Joystick_3D_Printing_Guide_v0.9.pdf)     |
-| Assembly Guide       | 0.9     | [DeviceName_Assembly_Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide_v0.9.pdf)     |
-| User Guide           | 0.9     | [DeviceName_User_Guide](/Documentation/Cedar_Mini_Joystick_User_Guide_v0.9.pdf)    |
-| Changelog            | 0.9     | [DeviceName_Changelog](/Documentation/Cedar_Mini_Joystick_Changelog_v0.9.pdf)     |
+| Design Rationale     | 0.9     | [Cedar_Mini_Joystick_Design_Rationale](/Documentation/Cedar_Mini_Joystick_Design_Rationale_v0.9.pdf)     |
+| Maker Checklist      | 0.9     | [Cedar_Mini_Joystick_Maker_Checklist](/Documentation/Cedar_Mini_Joystick_Maker_Checklist_v0.9.pdf)     |
+| Bill of Materials    | 0.9     | [Cedar_Mini_Joystick_Bill_of_Materials](/Documentation/Cedar_Mini_Joystick_BOM_v0.9.xlsx)     |
+| 3D Printing Guide    | 0.9     | [Cedar_Mini_Joystick_3D_Printing_Guide](/Documentation/Cedar_Mini_Joystick_3D_Printing_Guide_v0.9.pdf)     |
+| Assembly Guide       | 0.9     | [Cedar_Mini_Joystick_Assembly_Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide_v0.9.pdf)     |
+| User Guide           | 0.9     | [Cedar_Mini_Joystick_User_Guide](/Documentation/Cedar_Mini_Joystick_User_Guide_v0.9.pdf)    |
+| Changelog            | 0.9     | [Cedar_Mini_Joystick_Changelog](/Documentation/Cedar_Mini_Joystick_Changelog_v0.9.pdf)     |
 
 ### Design Files
 [CAD Files](/Design_Files)
