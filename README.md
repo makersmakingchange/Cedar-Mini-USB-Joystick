@@ -40,14 +40,14 @@ The Makers Checklist contains a list of tasks to complete to build the device.
 
 ### 2. Order the Off-The-Shelf Components
 
-The [Bill of Materials](/Documentation/Cedar_Mini_Joystick_BOM.xlsx) lists all of the parts and components required to build the Cedar Mini Joystick. The main switch component needs to be ordered online. The rest of the off-the-shelf components are also online or may be available in smaller quantities at your local hardware store or dollar store.
+The [Bill of Materials](/Documentation/Cedar_Mini_Joystick_BOM.csv) lists all of the parts and components required to build the Cedar Mini Joystick. The main switch component needs to be ordered online. The rest of the off-the-shelf components are also online or may be available in smaller quantities at your local hardware store or dollar store.
 
 
 ### 3. Print the 3D Printable components
 
 Print the components needed for the Cedar Mini Joystick. Make sure to ask the user if they would like any of the optional prints such as toppers or mount adapters.
 
-All of the files and individual print files can be in the [/Build_Files/3D_Printing_Files](/Build_Files/3D_Printing/) folder.
+All of the files and individual print files can be in the [/Build_Files/3D_Printing_Files](/Build_Files/3D_Printing_Files/) folder.
 
 ### 4. Assemble the Cedar Mini Joystick
 
@@ -58,7 +58,7 @@ Reference the [Assembly Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide
 | Document             | Version | Link |
 |----------------------|---------|------|
 | Design Rationale     | 0.9     | [Cedar_Mini_Joystick_Design_Rationale](/Documentation/Cedar_Mini_Joystick_Design_Rationale_v0.9.pdf)     |
-| Bill of Materials    | 0.9     | [Cedar_Mini_Joystick_Bill_of_Materials](/Documentation/Cedar_Mini_Joystick_BOM_v0.9.xlsx)     |
+| Bill of Materials    | 0.9     | [Cedar_Mini_Joystick_Bill_of_Materials](/Documentation/Cedar_Mini_Joystick_BOM_v0.9.csv)     |
 | 3D Printing Guide    | 0.9     | [Cedar_Mini_Joystick_3D_Printing_Guide](/Documentation/Cedar_Mini_Joystick_3D_Printing_Guide_v0.9.pdf)     |
 | Assembly Guide       | 0.9     | [Cedar_Mini_Joystick_Assembly_Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide_v0.9.pdf)     |
 | User Guide           | 0.9     | [Cedar_Mini_Joystick_User_Guide](/Documentation/Cedar_Mini_Joystick_User_Guide_v0.9.pdf)    |
@@ -67,7 +67,7 @@ Reference the [Assembly Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide
 [CAD Files](/Design_Files)
 
 ### Build Files
- - [3D Printing Files](/Build_Files/3D_Printing)
+ - [3D Printing Files](/Build_Files/3D_Printing_Files)
 
 ## Attribution
 Hardware and enclosure design: Josie Versloot, Neil Squire
@@ -80,9 +80,9 @@ The documentation template was created by Makers Making Change / Neil Squire and
 
 
 ## License
-Everything needed or used to design, make, test, or prepare the Oak Compact Joystick is licensed under the CERN 2.0 Weakly Reciprocal license https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-2 (CERN-OHL-W).
+Everything needed or used to design, make, test, or prepare the Cedar Mini Joystick is licensed under the CERN 2.0 Weakly Reciprocal license https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-2 (CERN-OHL-W).
 
-Accompanying material such as instruction manuals, videos, and other copyrightable works that are useful but not necessary to design, make, test, or prepare the Oak Compact Joystick are published under a Creative Commons Attribution-ShareAlike 4.0 license https://creativecommons.org/licenses/by-sa/4.0/ (CC BY-SA 4.0).
+Accompanying material such as instruction manuals, videos, and other copyrightable works that are useful but not necessary to design, make, test, or prepare the Cedar Mini Joystick are published under a Creative Commons Attribution-ShareAlike 4.0 license https://creativecommons.org/licenses/by-sa/4.0/ (CC BY-SA 4.0).
 
 ---
 
