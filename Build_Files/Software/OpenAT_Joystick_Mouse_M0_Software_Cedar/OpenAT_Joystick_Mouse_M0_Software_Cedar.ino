@@ -1,8 +1,8 @@
 /* 
-* File: OpenAT_Joystick_Mouse_M0_Software.ino
-* Software: OpenAT Joystick Plus 3 Switches, with both USB gamepad and mouse funtionality.
+* File: OpenAT_Joystick_Mouse_M0_Software_Cedar.ino
+* Software: OpenAT Joystick Plus 4 Switches, with both USB gamepad and mouse funtionality.
 * Developed by: MakersMakingChange
-* Version: (27 June 2023) 
+* Version: (12 July 2023) 
 * Copyright Neil Squire Society 2023. 
 * License: This work is licensed under the CC BY SA 4.0 License: http://creativecommons.org/licenses/by-sa/4.0 .
 */
@@ -18,7 +18,11 @@
 #define JOYSTICK_REACTION_TIME               30             //Minimum time between each action in ms
 #define SWITCH_REACTION_TIME                 100            //Minimum time between each switch action in ms
 
-#define MOUSE_MAX_XY                       12            // Amount to move mouse at max deflection (max "speed")
+#define SLOW_SCROLL_DELAY                    200            //Minimum time, in ms, between each slow scroll action (number of slow scroll actions defined below)
+#define FAST_SCROLL_DELAY                    60             //Minimum time, in ms, between each fast scroll action (higher delay = slower scroll speed)
+#define SLOW_SCROLL_NUM                      10             //Number of times to scroll at the slow scroll rate
+
+#define MOUSE_MAX_XY                         12            // Amount to move mouse at max deflection (max "speed")
 
 //Define model number and version number
 #define JOYSTICK_MODEL                        1
@@ -48,13 +52,15 @@ FlashStorage(modelNumberFlash, int);
 FlashStorage(versionNumberFlash, int);
 FlashStorage(deadzoneLevelFlash, int);
 
-//Declare joystick input variables 
+//Declare joystick input and output variables 
 int inputX;
 int inputY;
+int outputX;
+int outputY;
 
 //Declare switch state variables for each switch
 int switchAState;           // Mouse mode = left click
-int switchBState;           // Mouse mode = middle click
+int switchBState;           // Mouse mode = scroll mode
 int switchCState;           // Mouse mode = right click
 int switchJoyState;         // Mouse mode = left click              // Switch in the joystick (press down)
 
@@ -65,7 +71,6 @@ int switchAPrevState = HIGH;
 int switchBPrevState = HIGH;
 int switchCPrevState = HIGH;
 int switchJoyPrevState = HIGH;
-
 
 int currentDeadzoneValue;
 
@@ -113,6 +118,7 @@ const switchStruct switchProperty[] {
     {4,"Joy",4}
     
 };
+
 //***MICROCONTROLLER AND PERIPHERAL CONFIGURATION***//
 // Function   : setup 
 // 
@@ -123,7 +129,7 @@ const switchStruct switchProperty[] {
 // Return     : void
 //*********************************//
 void setup() {
-
+  
   // Check if mouse or joystick mode
   pinMode(SWITCH_MODE_PIN, INPUT_PULLUP);
   isMouseMode = digitalRead(SWITCH_MODE_PIN);
@@ -159,7 +165,15 @@ void loop() {
 
     settingsEnabled=serialSettings(settingsEnabled); //Check to see if setting option is enabled
     readJoystick();
-    readSwitch();
+    readSwitches();
+
+    joystickActions();
+    
+    if (isMouseMode) {
+      switchesMouseActions();
+    } else{
+      switchesJoystickActions();
+    }
 }
 
 //*********************************//
@@ -213,11 +227,6 @@ void initMemory() {
     Serial.println(deadzoneLevel);   
 }
 
-
-//*********************************//
-// Joystick Functions
-//*********************************//
-
 //***INITIALIZE JOYSTICK FUNCTION***//
 // Function   : initJoystick 
 // 
@@ -236,7 +245,7 @@ void initJoystick()
 // Function   : readJoystick
 //
 // Description: This function reads the current raw values of potentiometers, checks if values exceed deadband, and calculates
-//              joystick movements. Outputs true if joystick should be moved.
+//              joystick movements. 
 //
 // Parameters :  Void
 //
@@ -245,14 +254,13 @@ void initJoystick()
 
 void readJoystick() {
 
-  
     //Read analog raw value using ADC
     inputX = analogRead(JOYSTICK_X_PIN);
     inputY = analogRead(JOYSTICK_Y_PIN);  
 
     //Map joystick x and y move values 
-    int outputX = map(inputX, 0, 1023, -127, 127);
-    int outputY = map(inputY, 0, 1023, -127, 127);
+    outputX = map(inputX, 0, 1023, -127, 127);
+    outputY = map(inputY, 0, 1023, -127, 127);
 
     double outputMag = calcMag(outputX, outputY);
 
@@ -262,6 +270,21 @@ void readJoystick() {
       outputX = 0;
       outputY = 0;
     }
+
+}
+
+//***JOYSTICK ACTIONS FUNCTION**//
+// Function   : joystickActions
+//
+// Description: This function reads the current raw values of potentiometers, checks if values exceed deadband, and calculates
+//              joystick movements. Outputs true if joystick should be moved.
+//
+// Parameters :  Void
+//
+// Return     : Void
+//*********************************//
+
+void joystickActions() {
 
     if (isMouseMode){
       //mouse action
@@ -275,7 +298,7 @@ void readJoystick() {
 }
 
 //***READ SWITCH FUNCTION**//
-// Function   : readSwitch 
+// Function   : readSwitches 
 //
 // Description: This function reads the current digital values of pull-up pins.
 //
@@ -284,31 +307,23 @@ void readJoystick() {
 // Return     : Void
 //*********************************//
 
-void readSwitch(){
-
+void readSwitches(){
+    // Update Prev Switch States
+    switchAPrevState=switchAState;
+    switchBPrevState=switchBState;
+    switchCPrevState=switchCState;
+    switchJoyPrevState=switchJoyState;
 
     //Update status of switch inputs
     switchAState = digitalRead(SWITCH_A_PIN);
     switchBState = digitalRead(SWITCH_B_PIN);
     switchCState = digitalRead(SWITCH_C_PIN); 
     switchJoyState = digitalRead(SWITCH_JOY_PIN); 
-
-    if (isMouseMode) {
-      mouseSwitches();
-    } else{
-      joystickSwitches();
-    }
-
-    // Update Prev Switch States
-    switchAPrevState=switchAState;
-    switchBPrevState=switchBState;
-    switchCPrevState=switchCState;
-    switchJoyPrevState=switchJoyState;
     
 }
 
-//***JOYSTICK MODE SWITCH FUNCTION**//
-// Function   : joystickSwitches
+//***JOYSTICK MODE - SWITCH ACTIONS FUNCTION**//
+// Function   : switchesJoystickActions
 //
 // Description: This function executes joystick functions of the switches.
 //
@@ -317,7 +332,7 @@ void readSwitch(){
 // Return     : Void
 //*********************************//
 
-void joystickSwitches(){
+void switchesJoystickActions(){
 
     //Perform button actions
     if(!switchAState) {
@@ -347,8 +362,8 @@ void joystickSwitches(){
 
 }
 
-//***MOUSE MODE SWITCH FUNCTION**//
-// Function   : mouseSwitches
+//***MOUSE MODE - SWITCH ACTIONS FUNCTION**//
+// Function   : switchesMouseActions
 //
 // Description: This function executes mouse functions of the switches.
 //
@@ -357,7 +372,7 @@ void joystickSwitches(){
 // Return     : Void
 //*********************************//
 
-void mouseSwitches(){
+void switchesMouseActions(){
 
     //Perform button actions
     if(!switchAState) {
@@ -368,10 +383,35 @@ void mouseSwitches(){
     }
  
     if(!switchBState) {
-      Mouse.press(MOUSE_MIDDLE);
-    } else if(switchBState && !switchBPrevState) {
-      Mouse.release(MOUSE_MIDDLE);
-    }
+      int counter = 0;
+      while(!switchBState){
+
+        readJoystick();
+        readSwitches();
+
+        if (outputY>(currentDeadzoneValue)){
+          Mouse.move(0,0,1);
+          counter++;
+        } 
+        else if (outputY<-currentDeadzoneValue){
+          Mouse.move(0,0,-1);
+          counter++;
+        } else if (outputY==0){
+          counter=0;
+        }
+
+        if (counter==0){
+          delay(2);                             // low delay before any scroll actions have been completed, continue to read switches and joystick
+        }else if (counter==1){
+          delay(500);                           // long delay after first scroll action, to allow user to do single scroll
+        } else if (counter < SLOW_SCROLL_NUM){
+          delay(SLOW_SCROLL_DELAY);             // first 10 scroll actions are slower (have longer delay) to allow precise scrolling
+        } else{
+          delay(FAST_SCROLL_DELAY);             // scroll actions after first 10 are faster (have less delay) to allow fast scrolling
+        }
+        
+      }
+    } 
    
     if(!switchCState) {
       Mouse.press(MOUSE_RIGHT);
