@@ -3,18 +3,34 @@
 * Software: OpenAT Joystick Plus 4 Switches, with both USB gamepad and mouse funtionality.
 * Developed by: MakersMakingChange
 * Version: (12 July 2023) 
-* Copyright Neil Squire Society 2023. 
-* License: This work is licensed under the CC BY SA 4.0 License: http://creativecommons.org/licenses/by-sa/4.0 .
+  License: GPL v3
+
+  Copyright (C) 2023 Neil Squire Society
+  This program is free software: you can redistribute it and/or modify it under the terms of
+  the GNU General Public License as published by the Free Software Foundation,
+  either version 3 of the License, or (at your option) any later version.
+  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License along with this program.
+  If not, see <http://www.gnu.org/licenses/>
 */
 #include <FlashStorage.h>
 #include "XACGamepad.h"
 #include <TinyUSB_Mouse_and_Keyboard.h>
+
+#define MODE_MOUSE 1
+#define MODE_GAMEPAD 0
+
+#define UPDATE_INTERVAL   5 // TBD Update interval for perfoming HID actions (in milliseconds)
+#define DEFAULT_DEBOUNCING_TIME 5
 
 #define JOYSTICK_DEFAULT_DEADZONE_LEVEL      1              //Joystick deadzone
 #define JOYSTICK_MIN_DEADZONE_LEVEL          1
 #define JOYSTICK_MAX_DEADZONE_LEVEL          10
 #define JOYSTICK_MAX_DEADZONE_VALUE          64             //Out of 127
 #define JOYSTICK_MAX_VALUE                   127 
+
 #define JOYSTICK_REACTION_TIME               30             //Minimum time between each action in ms
 #define SWITCH_REACTION_TIME                 100            //Minimum time between each switch action in ms
 
@@ -22,7 +38,7 @@
 #define FAST_SCROLL_DELAY                    60             //Minimum time, in ms, between each fast scroll action (higher delay = slower scroll speed)
 #define SLOW_SCROLL_NUM                      10             //Number of times to scroll at the slow scroll rate
 
-#define MOUSE_MAX_XY                         12            // Amount to move mouse at max deflection (max "speed")
+#define MOUSE_MAX_XY                         6            // Amount to move mouse at max deflection (max "speed")
 
 //Define model number and version number
 #define JOYSTICK_MODEL                        1
@@ -52,6 +68,8 @@ FlashStorage(modelNumberFlash, int);
 FlashStorage(versionNumberFlash, int);
 FlashStorage(deadzoneLevelFlash, int);
 
+long lastInteractionUpdate;
+
 //Declare joystick input and output variables 
 int inputX;
 int inputY;
@@ -64,7 +82,7 @@ int switchBState;           // Mouse mode = scroll mode
 int switchCState;           // Mouse mode = right click
 int switchJoyState;         // Mouse mode = left click              // Switch in the joystick (press down)
 
-int isMouseMode;   // HIGH = Mouse mode, LOW = Joystick Mode
+int operatingMode;  // 1 = Mouse mode, 0 = Joystick mode
 
 //Previous status of switches
 int switchAPrevState = HIGH;          
@@ -132,13 +150,24 @@ void setup() {
   
   // Check if mouse or joystick mode
   pinMode(SWITCH_MODE_PIN, INPUT_PULLUP);
-  isMouseMode = digitalRead(SWITCH_MODE_PIN);
+  operatingMode = digitalRead(SWITCH_MODE_PIN);
 
+/*
   // Begin HID gamepad or mouse, depending on mode selection
   if (isMouseMode){
     Mouse.begin();
   } else{
     gamepad.begin();
+  }
+*/
+  // Begin HID gamepad or mouse, depending on mode selection
+  switch(operatingMode) {
+    case MODE_MOUSE:
+      Mouse.begin();
+      break;
+    case MODE_GAMEPAD:
+      gamepad.begin();
+      break;
   }
     
   delay(5000);
@@ -159,21 +188,31 @@ void setup() {
   pinMode(SWITCH_C_PIN, INPUT_PULLUP);   
   pinMode(SWITCH_JOY_PIN, INPUT_PULLUP);   
 
+  lastInteractionUpdate = millis();  // get first timestamp
+
 }
 
 void loop() {
 
     settingsEnabled=serialSettings(settingsEnabled); //Check to see if setting option is enabled
+    
+
+  if (millis() >= lastInteractionUpdate + UPDATE_INTERVAL) {    
+    lastInteractionUpdate = millis();  // get timestamp
     readJoystick();
     readSwitches();
 
     joystickActions();
-    
-    if (isMouseMode) {
-      switchesMouseActions();
-    } else{
-      switchesJoystickActions();
+
+    switch(operatingMode) {
+      case MODE_MOUSE:
+        switchesMouseActions();
+        break;
+      case MODE_GAMEPAD:
+        switchesJoystickActions();
+        break;
     }
+  }
 }
 
 //*********************************//
@@ -276,8 +315,7 @@ void readJoystick() {
 //***JOYSTICK ACTIONS FUNCTION**//
 // Function   : joystickActions
 //
-// Description: This function reads the current raw values of potentiometers, checks if values exceed deadband, and calculates
-//              joystick movements. Outputs true if joystick should be moved.
+// Description: This function executes joystick or mouse movements.
 //
 // Parameters :  Void
 //
@@ -286,15 +324,18 @@ void readJoystick() {
 
 void joystickActions() {
 
-    if (isMouseMode){
-      //mouse action
-      Mouse.move(MOUSE_MAX_XY*outputX/127, -MOUSE_MAX_XY*outputY/127, 0);
-    } else{
-      //Perform joystick HID action 
-      gamepadJoystickMove(outputX,outputY);
+    switch(operatingMode) {
+      case MODE_MOUSE:
+        //mouse action
+        Mouse.move(MOUSE_MAX_XY*outputX/127, -MOUSE_MAX_XY*outputY/127, 0);
+        break;
+      case MODE_GAMEPAD:
+        //Perform joystick HID action 
+        gamepadJoystickMove(outputX,outputY);
+        break;
     }
     
-    delay(JOYSTICK_REACTION_TIME);
+    //delay(JOYSTICK_REACTION_TIME);
 }
 
 //***READ SWITCH FUNCTION**//
