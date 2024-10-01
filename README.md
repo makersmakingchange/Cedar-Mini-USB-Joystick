@@ -1,5 +1,5 @@
-# Cedar-Mini-Joystick
-The Cedar Mini Joystick – U is a small USB joystick that can act as either an HID gamepad or as a mouse. It has a relatively small range of motion and a moderately low force required. In Joystick mode, it is compatible with the Xbox Adaptive Controller.
+# Cedar-Mini-USB-Joystick
+The Cedar Mini USB Joystick is a small USB joystick with integrated switch ports that can act as either an HID gamepad or as a mouse. It has a relatively small range of motion and a moderately low force required. In Joystick mode, it is compatible with the Xbox Adaptive Controller.
 
 <img src="Photos/Cedar-Mini-Joystick.jpg" width="500" alt="Picture of Cedar-Mini-Joystick.">
 
@@ -15,16 +15,12 @@ This is an open-source assistive technology, so anyone is free to build it. All 
 
 ### 2. Request a build of this device
 
-
-A limited number of these devices may be available at no-cost to people with disabilities that reside within Canada. If you think this applies to you, please send an email to info@makersmakingchange.com.
-
 Once the device is finalized and published in the Makers Making Change library, it will also be possible to submit a build request to have a volunteer maker build the device. As the requestor, you are responsible for reimbursing the maker for the cost of materials and any shipping.
 <!---
 If you would like to obtain a Cedar Mini Joystick , you may submit a build request through the [MMC Library Page](https://makersmakingchange.com/project/Cedar-Mini-Joystick/). The requestor is responsible for the cost of materials and any shipping.
 --->
 
 ### 3. How to build this device for someone else
-Once the device is finalized and published in the Makers Making Change library, there is a plan to hold a number of build events in Canada. If you'd like to participate, send an email to info@makersmakingchange.com.
 
 Once added to the library, if you have the skills and equipment to build this device, and would like to donate your time to create the device for someone who needs it, visit the [MMC Makers Wanted](https://makersmakingchange.com/maker-wanted/) section to fulfill build requests.
 
