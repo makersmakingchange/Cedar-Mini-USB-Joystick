@@ -11,7 +11,7 @@ The Cedar Mini USB Joystick is open assistive technology (OpenAT). Under the ter
 
 The overall cost of materials is about $42.75 CAD (plus $8 CAD for component shipping).
 
-<img src="Photos/Cedar-Joystick.jpg" width="500" alt="Picture of Cedar Mini USB Joystick.">
+<img src="Photos/Cedar-Mini-Joystick.jpg" width="500" alt="Picture of Cedar Mini USB Joystick.">
 
 ## Makers Making Change Assistive Device Library
 <MMCWebLink>
@@ -132,3 +132,4 @@ Makers Making Change leverages the capacity of community based Makers, Disabilit
 ### Contact Us
 For technical questions, to get involved, or to share your experience we encourage you to [visit our website](https://www.makersmakingchange.com/) or [contact us](https://www.makersmakingchange.com/s/contact).
 <!-- ABOUT MMC END -->
+
