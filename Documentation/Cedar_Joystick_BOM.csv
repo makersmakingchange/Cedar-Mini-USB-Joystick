@@ -1,0 +1,55 @@
+﻿Device:,Cedar Mini USB Joystick,,,,,,,,,,,,
+Version:, V1.0,,,,,,,,,,,,
+Last Updated:,2025-09-15,,,,,,,,,,,,
+,,,,,,,,Total filament (g),,Unit Cost,Total Estimated Cost,Build Cost,
+,,,,,,,,42.3,, $42.79 , $62.58 ,,
+ID,Commercial Parts,,,,,,,,, $41.73 , $61.52 ,,
+,Part,Description,,Manufacturer,Supplier,QTY / Device,QTY / PKG,PKGs,$/ PKG,$ / Device,Total Estimated Cost,,Link
+,Joystick (PS2),Electrical,,Wishiot,Amazon,1,10,1,21.99, $2.20 , $21.99 ,,https://www.amazon.ca/dp/B089VXPHDH?_encoding=UTF8&psc=1&ref_=cm_sw_r_cp_ud_dp_GGTEDME4PM2P27SG86P7 
+,"USB-C cable, 6 ft (can buy this locally)",Electrical,,Cvilux USA,DigiKey,1,1,1,3.43, $3.43 , $3.43 ,,https://www.digikey.ca/en/products/detail/cvilux-usa/DH-20M50053/13177348 
+,Adafruit QT Py SAMD21,Electrical,,Adafruit Industries LLC,DigiKey,1,1,1,10.93, $10.93 , $10.93 ,,https://www.digikey.ca/en/products/detail/adafruit-industries-llc/4600/13543375 
+,"3.5 mm mono jack, panel mount",Electrical,,Same Sky,DigiKey,3,1,3,2.19, $6.57 , $6.57 ,,https://www.digikey.ca/en/products/detail/cui-devices/MJ-3502/281321 
+,"Slide switch, right angle",Electrical,,C&K,DigiKey,1,1,1,0.95, $0.95 , $0.95 ,,https://www.digikey.ca/en/products/detail/c-k/OS102011MA1QS1/1981431 
+,"Right angle female header, 5 position",Electrical,,Sullins Connector Solutions,DigiKey,1,1,1,0.76, $0.76 , $0.76 ,,https://www.digikey.ca/en/products/detail/sullins-connector-solutions/PPTC051LGBN-RC/775899 
+,"Female header, 7 position, single row, 0.100""",Electrical,,Sullins Connector Solutions,DigiKey,2,1,2,0.68, $1.36 , $1.36 ,,https://www.digikey.ca/en/products/detail/sullins-connector-solutions/PPTC071LFBN-RC/810146 
+,"Sheet Metal Screw, #4, 3/8″ Length (if building more than one, link below)",Mechanical,,Serpac,DigiKey,8,1,8,0.61, $4.88 , $4.88 ,,https://www.digikey.ca/en/products/detail/serpac/6005/307599 
+,"Wire, 24 AWG, solid core, 1 foot, white",Electrical,,CNC Tech,DigiKey,1,1,1,0.73, $0.73 , $0.73 ,,https://www.digikey.ca/en/products/detail/cnc-tech/1007-24-1-2000-002-1-TD/17799208 
+,"Wire, 24 AWG, solid core, 1 foot, black",Electrical,,CNC Tech,DigiKey,1,1,1,0.73, $0.73 , $0.73 ,,https://www.digikey.ca/en/products/detail/cnc-tech/1007-24-1-2000-001-1-TD/17799235 
+,"Wire, 24 AWG, solid core, 1 foot, green",Electrical,,CNC Tech,DigiKey,1,1,1,0.73, $0.73 , $0.73 ,,https://www.digikey.ca/en/products/detail/cnc-tech/1007-24-1-2000-007-1-TD/17799170 
+,"Cable Tie, 4 in.",Mechanical,,TE Connectivity AMP Connectors,DigiKey,1,1,1,0.16, $0.16 , $0.16 ,,https://www.digikey.ca/en/products/detail/te-connectivity/2-604771-9/2259327 
+,"Hex Nut, M3",Mechanical,,Keystone Electronics,DigiKey,2,1,2,0.15, $0.30 , $0.30 ,,https://www.digikey.ca/en/products/detail/keystone-electronics/4708/4499301 
+,"Machine Screw, M3, Pan Head, 12mm (Optional for mount)",Mechanical,,APM Hexseal,DigiKey,0,1,0,0.98, $-   , $-   ,,https://www.digikey.ca/en/products/detail/apm-hexseal/RM3X12MM-2701/2063201 
+,"Tee nut, 1/4-20 UNC, 5/16 in length  (Optional for mount)",Mechanical,,Paulin,Home Depot,0,1,0,0.55, $-   , $-   ,,https://www.homedepot.ca/product/paulin-1-4-inch-20-tee-nuts-4-prong-5-16-inch-barrel-length/1000129429 
+,Digikey shipping (if spending less than $100),Shipping,,,,1,1,1,8, $8.00 , $8.00 ,,
+,,,,,,,,,,,,,
+,3D Printed Parts,,,,,,,42.3,, $1.06 , $1.06 ,,
+,Part,Description,Filament Type,Filament,Color,QTY / Device,Mass (g) / Part,Total Mass,$ / kg,$ / Device,Total Estimated Cost,,Link
+,Enclosure bottom,,PLA,,Any,1,20.2,20.2, $25.00 , $0.51 , $0.51 ,,
+,Enclosure top,,PLA,,Any,1,11.9,11.9, $25.00 , $0.30 , $0.30 ,,
+,3D PCB,,PLA,,Any,1,8,8.0, $25.00 , $0.20 , $0.20 ,,
+,Slide switch ,,PLA,,Any,1,0.6,0.6, $25.00 , $0.02 , $0.02 ,,
+,RAM or 1/4-20 Mounting Adapter (Optional),,PLA,,Any,1,1.6,1.6, $26.00 , $0.04 , $0.04 ,,
+,Custom PCB,,,,,,,,, $-   , $-   ,,
+,Part,Description,,Manufacturer,Supplier,QTY / Device,QTY / PKG,PKGs,$/ PKG,$ / Device,Total Estimated Cost,,Link
+,<None>,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,Tools,,,,,,,,,,,,
+,Tool,Description,,Manufacturer,Supplier,,,,,,,,Link
+,Flush cutters,,,,,,,,,,,,
+,Wire strippers,,,,,,,,,,,,
+,Soldering iron,,,,,,,,,,,,
+,Philips head screw driver,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,Alternatives,,,,,,,,,,,,
+,Part,Description,,Manufacturer,Supplier,QTY / Device,QTY / PKG,PKGs,$/ PKG,$ / Device,Total Estimated Cost,,Link
+,"#4 Metal Screw, 3/8″ Length, 100 pack",Electrical,,Small Parts,Amazon,8,100,1,12.41, $0.99 , $12.41 ,,https://a.co/d/523bJeL 
+,"USB-C cable, 3 feet",Electrical,,Amazon,Amazon,1,1,1,8.99, $8.99 , $8.99 ,,https://a.co/d/97Y71JT 
+,"USB-C cable, 6 feet, 2 pack",Electrical,,Wcakby,Amazon,1,2,1,10.99, $5.50 , $10.99 ,,https://a.co/d/6UE2og9
+,"USB-C cable, 6 feet, 5 pack",Electrical,,CLEEFUN,Amazon,1,5,1,15.99, $3.20 , $15.99 ,,https://a.co/d/b3qG7jC
+,Cable Tie,Mechanical,,Heyco Products Corporation,DigiKey,1,1,1,0.15, $0.15 , $0.15 ,,https://www.digikey.ca/en/products/detail/heyco-products-corporation/13123B/15791902
+,"Wire, 22 AWG, Solid Core, Multiple Color Pack",Electrical,,Adafruit,Adafruit,,,,,,,,https://www.adafruit.com/product/1311
+,,,,,,,,,,,,,https://www.digikey.ca/en/products/detail/adafruit-industries-llc/1311/6198255 
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
