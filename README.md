@@ -1,87 +1,117 @@
-# Cedar Mini USB Joystick
-The Cedar Mini USB Joystick is a small USB joystick with integrated switch ports that can act as either an HID gamepad or as a mouse. It has a relatively small range of motion and a moderately low force required. In Joystick mode, it is compatible with the Xbox Adaptive Controller.
 
-<img src="Photos/Cedar-Mini-Joystick.jpg" width="500" alt="Picture of Cedar-Mini-Joystick.">
+# Cedar Mini USB Joystick
+
+## Overview
+
+The Cedar Mini USB Joystick is a mini sized proportional joystick with integrated switch ports that can act as either an HID gamepad or as a mouse for adaptive gaming or computer access. Based on a generic PS2-style game controller thumbstick, it has range of motion of ±30° and requires approximately 75 grams-force to fully deflect. This joystick has a USB output cable and 3 switch access ports. 
+
+The Cedar Mini USB Joystick can be used directly as a left or right thumbstick for the [Microsoft Xbox Adaptive Controller (XAC)](https://www.xbox.com/en-CA/accessories/controllers/xbox-adaptive-controller) using the Left and Right USB joystick ports in Joystick mode, or directly with a computer or mobile device.
+ 
+The Cedar Mini USB Joystick is open assistive technology (OpenAT). Under the terms of the open source licenses, the device may be built, used, and improved upon by anyone.
+
+The overall cost of materials is about $42.75 CAD (plus $8 CAD for component shipping).
+
+<img src="Photos/Cedar-Joystick.jpg" width="500" alt="Picture of Cedar Mini USB Joystick.">
+
+## Makers Making Change Assistive Device Library
+<MMCWebLink>
 
 ## OpenAT Joysticks
 This design is part of the [OpenAT Joystick project](https://github.com/makersmakingchange/OpenAT-Joysticks), a collection of open source designs for digital access and adapted gaming.  
 
+## How to Obtain the Device
+### 1. Do-it-Yourself (DIY) or Do-it-Together (DIT)
 
-## How to Obtain a Cedar Mini Joystick
-There are several options for obtaining the device.
-### 1. Do it Yourself (DIY) or Do it Together (DIT)
-
-This is an open-source assistive technology, so anyone is free to build it. All of the files and instructions required to build the Cedar Mini Joystick are contained within this repository. Refer to the Maker Checklist below.
+This is an open-source assistive technology, so anyone is free to build it. All of the files and instructions required to build the device are contained within this repository. Refer to the Maker Guide below.
 
 ### 2. Request a build of this device
 
-Once the device is finalized and published in the Makers Making Change library, it will also be possible to submit a build request to have a volunteer maker build the device. As the requestor, you are responsible for reimbursing the maker for the cost of materials and any shipping.
-<!---
-If you would like to obtain a Cedar Mini Joystick , you may submit a build request through the [MMC Library Page](https://makersmakingchange.com/project/Cedar-Mini-Joystick/). The requestor is responsible for the cost of materials and any shipping.
---->
+You may also submit a build request through the [Makers Making Change Assistive Device Library Listing](<MMCWebLink>) to have a volunteer maker build the device. As the requestor, you are responsible for reimbursing the maker for the cost of materials and any shipping.
 
-### 3. How to build this device for someone else
+### 3. Build this device for someone else
 
-Once added to the library, if you have the skills and equipment to build this device, and would like to donate your time to create the device for someone who needs it, visit the [MMC Makers Wanted](https://makersmakingchange.com/maker-wanted/) section to fulfill build requests.
+If you have the skills and equipment to build this device, and would like to donate your time to create the device for someone who needs it, visit the [MMC Maker Wanted](https://makersmakingchange.com/maker-wanted/) section.
 
-<!---
-If you have the skills and equipment to build this device, and would like to donate your time to create the switch for someone who needs it, visit the [MMC Maker Wanted](https://makersmakingchange.com/maker-wanted/) section.
---->
 
-## Getting Started
+## Build Instructions
+<!--- Outline the major steps required to create a build --->
 
-### 1. Read the Makers Checklist
+### 1. Read through the Maker Guide
 
-The Makers Checklist contains a list of tasks to complete to build the device.
+The [Maker Guide](/Documentation/Cedar_Joystick_Maker_Guide.pdf)  contains all the necessary information to build this device, including tool lists, assembly instructions, programming instructions (if applicable) and testing.
+
 
 ### 2. Order the Off-The-Shelf Components
 
-The [Bill of Materials](/Documentation/Cedar_Mini_Joystick_BOM.csv) lists all of the parts and components required to build the Cedar Mini Joystick. The main switch component needs to be ordered online. The rest of the off-the-shelf components are also online or may be available in smaller quantities at your local hardware store or dollar store.
+The [Bill of Materials](/Documentation/Cedar_Joystick_BOM.csv) lists all of the parts and components required to build the device.
 
 
 ### 3. Print the 3D Printable components
 
-Print the components needed for the Cedar Mini Joystick. Make sure to ask the user if they would like any of the optional prints such as toppers or mount adapters.
+All of the files and individual print files can be found in the [/Build_Files/3D_Printing_Files](/Build_Files/3D_Printing_Files/) folder.
 
-All of the files and individual print files can be in the [/Build_Files/3D_Printing_Files](/Build_Files/3D_Printing_Files/) folder.
+### 4. Assemble the Cedar Mini USB Joystick
 
-### 4. Assemble the Cedar Mini Joystick
+Reference the Assembly Guide section of the [Maker Guide](/Documentation/Cedar_Joystick_Maker_Guide.pdf) for the tools and steps required to build the device.
 
-Reference the [Assembly Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide_v0.9.pdf) for the tools and steps required to build each portion.
+## How to improve this Device
+As open source assistive technology, you are welcomed and encouraged to improve upon the design. 
 
 ## Files
 ### Documentation
+<!--- Update the name, link, and version for documentation --->
 | Document             | Version | Link |
 |----------------------|---------|------|
-| Design Rationale     | 0.9     | [Cedar_Mini_Joystick_Design_Rationale](/Documentation/Cedar_Mini_Joystick_Design_Rationale_v0.9.pdf)     |
-| Bill of Materials    | 0.9     | [Cedar_Mini_Joystick_Bill_of_Materials](/Documentation/Cedar_Mini_Joystick_BOM_v0.9.csv)     |
-| 3D Printing Guide    | 0.9     | [Cedar_Mini_Joystick_3D_Printing_Guide](/Documentation/Cedar_Mini_Joystick_3D_Printing_Guide_v0.9.pdf)     |
-| Assembly Guide       | 0.9     | [Cedar_Mini_Joystick_Assembly_Guide](/Documentation/Cedar_Mini_Joystick_Assembly_Guide_v0.9.pdf)     |
-| User Guide           | 0.9     | [Cedar_Mini_Joystick_User_Guide](/Documentation/Cedar_Mini_Joystick_User_Guide_v0.9.pdf)    |
+| Design Rationale     | 1.0     | [Cedar_Joystick_Design_Rationale](/Documentation/Cedar_Joystick_Design_Rationale.pdf)     |
+| Maker Guide          | 1.0     | [Cedar_Joystick_Maker_Guide](/Documentation/Cedar_Joystick_Maker_Guide.pdf)     |
+| Bill of Materials    | 1.0     | [Cedar_Joystick_Bill_of_Materials](/Documentation/Cedar_Joystick_BOM.xlsx)     |
+| User Guide           | 1.0     | [Cedar_Joystick_User_Guide](/Documentation/Cedar_Joystick_User_Guide.pdf)    |
+| Changelog            | 1.0     | [Changelog](CHANGES.txt)     |
 
 ### Design Files
-[CAD Files](/Design_Files)
+<!--- Include a copy of the original design files to facilitate easy editing and customization. Consider also including a generic format (e.g., STEP) --->
+ - [CAD Files](/Design_Files/CAD_Design_Files)
 
 ### Build Files
+<!--- Include a copy of the build files intended for manufacturing. This may include svg files for laser cutting, stl files for 3d printing, Gerber files for custom PCBs, and Arduino files for custom firmware. --->
  - [3D Printing Files](/Build_Files/3D_Printing_Files)
-
-## Attribution
-Hardware and enclosure design: Josie Versloot, Neil Squire
-
-Software: Milad Hajihassan, Neil Squire and Josie Versloot, Neil Squire
-
-The software utilizes the [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino) which is made available under an [MIT license](https://github.com/adafruit/Adafruit_TinyUSB_Arduino/blob/master/LICENSE).
-
-The documentation template was created by Makers Making Change / Neil Squire and is used under a CC BY-SA 4.0 license. It is available at the following link: https://github.com/makersmakingchange/OpenAT-Template
+ - [Firmware Files](/Build/Firmware_Files)
 
 
 ## License
-Everything needed or used to design, make, test, or prepare the Cedar Mini Joystick is licensed under the CERN 2.0 Weakly Reciprocal license https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-2 (CERN-OHL-W).
+<!--- Add the 2023-2025(s) for the copyright and the Designer Name. You may use the standard set of open licenses or choose your own for the hardware, software, and accompanying materials. --->
+Copyright (c) 2023-2025 Neil Squire Society.
 
-Accompanying material such as instruction manuals, videos, and other copyrightable works that are useful but not necessary to design, make, test, or prepare the Cedar Mini Joystick are published under a Creative Commons Attribution-ShareAlike 4.0 license https://creativecommons.org/licenses/by-sa/4.0/ (CC BY-SA 4.0).
+This repository describes Open Hardware:
+ - Everything needed or used to design, make, test, or prepare the Cedar Mini USB Joystick is licensed under the [CERN 2.0 Weakly Reciprocal license (CERN-OHL-W v2) or later](https://cern.ch/cern-ohl ) .
+ - All software is under the [GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl.html).
+ - Accompanying material such as instruction manuals, videos, and other copyrightable works that are useful but not necessary to design, make, test, or prepare the <Device-Name> are published under a [Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) .
+
+You may redistribute and modify this documentation and make products using it under the terms of the [CERN-OHL-W v2](https://cern.ch/cern-ohl).
+This documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
+Please see the CERN-OHL-W v2 for applicable conditions.
+
+Source Location: https://github.com/makersmakingchange/Cedar-Mini-USB-Joystick 
+
+## Attribution
+<!--- Provide any necessary attribution for designs or components that are included in the device or as part of the project. --->
+The device was designed by <Josie Versloot, Neil Squire Society>. 
+
+The software utilizes the [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino) which is made available under an [MIT license](https://github.com/adafruit/Adafruit_TinyUSB_Arduino/blob/master/LICENSE).
+
+<!--- This is the attribution for the template. --->
+The documentation template was created by Makers Making Change / Neil Squire Society and is used under a CC BY-SA 4.0 license. It is available at the following link: [https://github.com/makersmakingchange/OpenAT-Template](https://github.com/makersmakingchange/OpenAT-Template)
+
+### Contributors
+<!--- List the names of the people that contributed to the design. This could include the original source of the idea, designers, testers, documenters, etc. --->
+Designers:
+ - <Josie Versloot, Neil Squire Society. Hardware and enclosure design, software, documentation>
+ - <Milad Hajihassan, Neil Squire Society. Software>
+ - <Emily Schwitz, Neil Squire Society. Documentation>
+
 
 ---
-
+<!--- This is standard boilerplate for Makers Making Change. No changes should be required. --->
 <!-- ABOUT MMC START -->
 ## About Makers Making Change
 [<img src="https://raw.githubusercontent.com/makersmakingchange/makersmakingchange/main/img/mmc_logo.svg" width="500" alt="Makers Making Change Logo">](https://www.makersmakingchange.com/)
