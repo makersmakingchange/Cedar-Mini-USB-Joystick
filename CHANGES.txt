@@ -1,7 +1,8 @@
 ------CEDAR MINI JOYSTICK------
            Changelog
 ===============================
-Version 1.0 | 2025-09-15
+Version 1.0 | 2026-02-20
+ - Initial release
  - Updated documentation
     - Finalized Maker Guide
     - Update User Guide and BOM
