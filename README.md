@@ -55,6 +55,8 @@ The [Bill of Materials](/Documentation/Cedar_Joystick_BOM.csv) lists all of the 
 
 All of the files and individual print files can be found in the [/Build_Files/3D_Printing_Files](/Build_Files/3D_Printing_Files/) folder.
 
+Make sure to ask the user if they would like any of the optional prints such as toppers or mount adapters. Refer to the [OpenAT Joystick Setup Guide](https://github.com/makersmakingchange/OpenAT-Joysticks/Resources/OpenAT_Joystick_Setup_Guide.pdf) for detailed mounting options. 
+
 ### 4. Assemble the Cedar Mini USB Joystick
 
 Reference the Assembly Guide section of the [Maker Guide](/Documentation/Cedar_Joystick_Maker_Guide.pdf) for the tools and steps required to build the device.
@@ -89,7 +91,11 @@ Copyright (c) 2023-2026 Neil Squire Society.
 This repository describes Open Hardware:
  - Everything needed or used to design, make, test, or prepare the Cedar Mini USB Joystick is licensed under the [CERN 2.0 Weakly Reciprocal license (CERN-OHL-W v2) or later](https://cern.ch/cern-ohl ) .
  - All software is under the [GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl.html).
+<<<<<<< Updated upstream
  - Accompanying material such as instruction manuals, videos, and other copyrightable works that are useful but not necessary to design, make, test, or prepare the Cedar USB Joystick are published under a [Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) .
+=======
+ - Accompanying material such as instruction manuals, videos, and other copyrightable works that are useful but not necessary to design, make, test, or prepare the Cedar Joystick are published under a [Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) .
+>>>>>>> Stashed changes
 
 You may redistribute and modify this documentation and make products using it under the terms of the [CERN-OHL-W v2](https://cern.ch/cern-ohl).
 This documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
@@ -102,6 +108,8 @@ Source Location: https://github.com/makersmakingchange/Cedar-Mini-USB-Joystick
 The device was designed by the Neil Squire Society / Makers Making Change Program. 
 
 The software utilizes the [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino) which is made available under an [MIT license](https://github.com/adafruit/Adafruit_TinyUSB_Arduino/blob/master/LICENSE).
+
+A range of toppers are availablef or this joystick and utilize the mofels found in the [set of toppers created by AbleGamers Charity](https://www.printables.com/model/501869-analog-thumbstick-topper-collection).
 
 <!--- This is the attribution for the template. --->
 This project uses the documentation template created by Neil Squire Society / Makers Making Change. It is available at the following link: [https://github.com/makersmakingchange/OpenAT-Template](https://github.com/makersmakingchange/OpenAT-Template)
